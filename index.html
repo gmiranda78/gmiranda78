@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment4</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="css/responsive-nav.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Parkinsans:wght@300..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/responsive-nav.css">
+</head>
+
+<body>
+    <header class="navbar">
+        <h1>a marvelous website</h1>
+        <nav class="nav-collapse">
+            <ul>
+                <li><a href="#">home</a></li>
+                <li><a href="#">about</a></li>
+                <li><a href="#">contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="form-section">
+        <div class="welcome">
+            <h2>Welcome.</h2>
+            <p>We're glad you're here.</p>
+            <a href="#learn-more" class="learn-more-btn">learn more</a>
+        </div>
+        <form class="contact-form">
+            <p>Join our mailing list for updates!</p>
+            <label for="name">Your name </label>
+            <br>
+            <input type="text" id="name" name="name"/><br>
+            <label for="email">Email <br>
+                <input type="text" id="email" name="email"/></label>
+            <button type="submit">SUBMIT</button>
+        </form>
+    </section>
+
+    <section class="photo-section">
+        <img src="img/trust.jpeg" alt="quote trust the timimg of your life" class="animated-img" />
+        <img src="img/happy.jpeg" alt="scrabble pieces spelling 'happy'" class="animated-img" />
+        <img src="img/notthat.jpeg" alt="quote it's not that serious" class="animated-img" />
+    </section>
+    <footer>
+        &copy; comp 126
+    </footer>
+
+    <script>
+        var nav = responsiveNav(".nav-collapse", {
+            label: "☰",
+            closeOnNavClick: true,
+            open: function () {
+            document.querySelector(".nav-toggle").innerHTML = "×";
+            },
+            close: function () {
+            document.querySelector(".nav-toggle").innerHTML = "☰";
+            }
+            });
+    </script>
+</body>
+</html>
